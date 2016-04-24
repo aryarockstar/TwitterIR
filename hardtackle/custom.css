@@ -1,0 +1,8 @@
+.no-radius {
+border-radius: 0px;
+}
+
+.small_btn{
+    height:10px;
+    width:20px;
+}

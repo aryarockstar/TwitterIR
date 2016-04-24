@@ -1,0 +1,64 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Hard Tackle | Twitter based Football Entertainment</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="bootstrap.min.css" rel="stylesheet" media="screen">
+  <link href="custom.css" rel="stylesheet" media="screen">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+ <div class="row">
+  <div class="col-sm-4"></div>
+  <div class="col-sm-4">
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<img src="test.jpg" class = "center-block" style="width: 350px; height: 136px;" />
+<br>
+<form name="search" action="../../cgi-bin/test.cgi" method="POST">
+<input type="text" class="form-control no-radius" name="searchbox" autofocus>
+<br>
+<div class="col-sm-6">
+<label class="checkbox-inline checkbox-success"><input type="checkbox" value="">Media Preference</label>
+</div>
+<div class="col-sm-6">
+
+ <div class="dropdown" style = "text-align: right">
+  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    Language
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+    <li><a href="#" data-value="en">English</a></li>
+    <li><a href="#" data-value="es">Spanish</a></li>
+    <li><a href="#" data-value="fr">French</a></li>
+  </ul>
+</div>
+</div>
+
+<script type="text/javascript">
+$(".dropdown-menu li a").click(function(){
+  $(this).parents(".dropdown").find('.btn').html($(this).text() + ' <span class="caret"></span>');
+  $(this).parents(".dropdown").find('.btn').val($(this).data('value'));
+});
+</script>
+<br>
+<br>
+<br>
+<input type="submit" class="btn btn-success center-block" value="Search" style="height:40px; width:130px">
+</form> 
+</div>
+
+  <div class="col-sm-4"></div>
+</div>
+</body>
+</html>
+
