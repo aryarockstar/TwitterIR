@@ -1,20 +1,82 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>Hard Tackle | Twitter based Football Entertainment</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link href="bootstrap.min.css" rel="stylesheet" media="screen">
+  <link href="custom.css" rel="stylesheet" media="screen">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
-<body>
+<body style="background-color: #ebeff0">
 
-<div class="container">
-  <h1>My 2nd Bootstrap Page</h1>
-  <p>This is some text.</p>
+ <div class="row" style="background-color: white;">
+  <div class="col-sm-3">
+<br>
+<img src="test.jpg" class = "center-block" style="width: 250px; height: 97px;" />
 </div>
 
+  <div class="col-sm-6">
+<br>
+<br>
+<form name="search" action="../../cgi-bin/test.cgi" method="POST">
+<input type="text" class="form-control no-radius" name="searchbox" autofocus>
+<br>
+<div class="col-sm-6">
+<label class="checkbox-inline checkbox-success"><input type="checkbox" id ="cb111" value="unsel" onclick="calc();">Media Preference</label>
+</div>
+<script type="text/javascript">
+function calc()
+{
+  if (document.getElementById('cb111').checked) 
+  {
+	alert(document.getElementById('cb111').value);
+	document.getElementById('cb111').value = "sel";
+  } else { 
+
+	alert(document.getElementById('cb111').value);
+	document.getElementById('cb111').value = "unsel";
+  }
+}
+</script>
+<div class="col-sm-6">
+  <select name="langsel" id="dd1" class="form-control" onchange="calc1()">
+    <option value=" ">Language (Any)</option>
+    <option value="en">English</option>
+    <option value="es">Spanish</option>
+    <option value="fr">French</option>
+  </select>
+</div>
+<script type="text/javascript">
+function calc1()
+{
+	alert(document.getElementById('dd1').value);
+}
+</script>
+
+<script type="text/javascript">
+$(".dropdown-menu li a").click(function(){
+  $(this).parents(".dropdown").find('.btn').html($(this).text() + ' <span class="caret"></span>');
+  $(this).parents(".dropdown").find('.btn').val($(this).data('value'));
+});
+</script>
+<br>
+<br>
+<br>
+
+</div>
+
+  <div class="col-sm-3"></div>
+<br>
+<br>
+<input type="submit" class="btn btn-success " value="Search" style="height:40px; width:160px">
+</form> 
+</div>
+<div class="row">
+
+</div>
 </body>
 </html>
+
 
