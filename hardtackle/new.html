@@ -73,8 +73,46 @@ $(".dropdown-menu li a").click(function(){
 <input type="submit" class="btn btn-success " value="Search" style="height:40px; width:160px">
 </form> 
 </div>
-<div class="row">
 
+<div class="row">
+<div class = "col-sm-2">
+</div>
+<div class = "col-sm-8">
+
+<table id="myTable" border="1" class = "table table-striped">
+<tr>
+<td>d</td>
+<td>d</td>
+</tr>
+<tr>
+<td>d</td>
+<td>d</td>
+</tr>
+</table>
+<input type="button" class = "btn btn-default" onclick="changeContentBack()" value="Prev">
+<input type="button" class = "btn btn-default" onclick="changeContent()" value="Next">
+<script type="text/javascript">
+count =0;
+limit=10;
+function changeContent(){
+if(count!=limit)
+ count++;
+    var x=document.getElementById('myTable').rows;
+    var y=x[0].cells;
+    y[0].innerHTML=count.toString();
+}
+function changeContentBack(){
+    if(count!=0)
+    count--;
+    var x=document.getElementById('myTable').rows;
+    var y=x[0].cells;
+    y[0].innerHTML=count.toString();
+
+}
+</script>
+</div>
+</div>
+<div class = "col-sm-2">
 </div>
 </body>
 </html>
